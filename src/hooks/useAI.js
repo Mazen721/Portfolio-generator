@@ -5,8 +5,7 @@ export const useAI = () => {
   const [error, setError] = useState(null);
 
   // Groq API Key
-  const apiKey = "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"; 
-
+const apiKey = import.meta.env.VITE_GROQ_API_KEY;
   const callGroq = async (promptText) => {
     setIsLoading(true);
     setError(null);
