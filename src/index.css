@@ -1,0 +1,47 @@
+/* Custom styles if any */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media print {
+  /* 1. إخفاء التاريخ واللينك الخاصين بالمتصفح */
+  @page {
+    margin: 0; 
+  }
+
+  /* 2. إضافة مسافة داخلية للورقة عشان الكلام ميكونش على الحافة بالظبط */
+  body {
+    background-color: white !important;
+    padding: 1.5cm !important; 
+  }
+
+  /* 3. الكود بتاعك الأساسي لإخفاء الفورم والزراير */
+  nav, .col-lg-5, .btn {
+    display: none !important;
+  }
+  
+  /* 4. تكبير شاشة العرض لتملأ الورقة */
+  .col-lg-7 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    padding: 0 !important;
+    background-color: white !important;
+    overflow: visible !important;
+  }
+
+  /* 5. إزالة أي أبعاد بتمنع الطباعة الكاملة */
+  .container-fluid, .row, .h-100 {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
