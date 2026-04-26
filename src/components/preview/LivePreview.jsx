@@ -11,14 +11,14 @@ const LivePreview = () => {
   const displayBio = personalInfo.bio || 'Your bio will appear here. Write something interesting about yourself and your career goals.';
 
   return (
-    <div className="portfolio-preview h-100 overflow-auto w-100 bg-light">
-      <div className="d-flex justify-content-end mb-3 pb-3 p-4 d-print-none border-bottom">
+    <div className="portfolio-preview h-100 overflow-auto w-100 bg-light position-relative">
+      <div className="d-flex justify-content-end p-3 d-print-none border-bottom sticky-top bg-light z-3" style={{ top: 0 }}>
         <button className="btn btn-success" onClick={() => window.print()}>
           <i className="bi bi-file-earmark-pdf me-2"></i> Download as PDF
         </button>
       </div>
 
-      <div className="container bg-white p-5 shadow-sm mb-5" style={{ maxWidth: '850px' }}>
+      <div className="container bg-white p-5 shadow-sm mb-5 preview-container" style={{ maxWidth: '850px' }}>
         {/* Header Section */}
         <div className="mb-5">
           <h1 className="display-4 fw-bold mb-2">
